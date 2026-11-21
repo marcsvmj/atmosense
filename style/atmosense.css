@@ -1,0 +1,250 @@
+:root {
+  --surface-hover: #1b2940;
+  --border: #1e2d43;
+  --muted: #94a3b8;
+  --cyan: #00c9e8;
+}
+
+[data-testid="stMainBlockContainer"] {
+  max-width: 1600px;
+  padding-top: 2.1rem;
+  padding-bottom: 2rem;
+}
+
+[data-testid="stHeader"] {
+  background: var(--nothing);
+}
+
+.dashboard-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.dashboard-subtitle {
+  color: var(--cyan);
+  font-size: 0.78rem;
+  margin-top: 0.35rem;
+}
+
+.section-label {
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  margin: 0 0 0.8rem 0;
+}
+
+.metric-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  min-height: 112px;
+  margin-bottom: 0.8rem;
+}
+
+.metric-card .metric-label {
+  font-size: 0.76rem;
+  margin-bottom: 0.65rem;
+}
+
+.metric-card .metric-value {
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.metric-card .metric-description {
+  color: var(--cyan);
+  font-size: 0.72rem;
+  margin-top: 0.4rem;
+}
+
+.main-temperature-card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.main-temperature-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.main-temperature-value {
+  font-size: clamp(3rem, 5vw, 4.2rem);
+  font-weight: 750;
+  line-height: 1.2;
+  margin: 0.55rem 0;
+}
+
+.main-temperature-value span {
+  color: var(--cyan);
+  font-size: 1.65rem;
+  vertical-align: top;
+  margin-left: 0.15rem;
+}
+
+.main-temperature-footer {
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 0.85rem;
+  margin-top: 1rem;
+  font-size: 0.78rem;
+}
+
+.panel-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.forecast-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem;
+  padding: 0.85rem 0.45rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  font-size: 0.78rem;
+}
+
+.forecast-row:last-child {
+  border-bottom: none;
+}
+
+.forecast-day {
+  min-width: 2.2rem;
+  font-weight: 600;
+}
+
+.forecast-status {
+  font-size: 0.68rem;
+  text-align: right;
+}
+
+.data-note {
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+[data-testid="stPlotlyChart"] {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.45rem 0.45rem 0 0.45rem;
+  margin-bottom: 0.8rem;
+}
+
+[data-testid="stDataFrame"] {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+div[data-testid="stMarkdownContainer"] p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  [data-testid="stMainBlockContainer"] {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* novo */
+
+
+/* Previsão meteorológica */
+
+.forecast-card {
+  padding: 1rem;
+  margin-bottom: 0.7rem;
+  transition: border-color 0.2s ease;
+}
+
+.forecast-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forecast-day {
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.forecast-date {
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.forecast-condition {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.5rem;
+}
+
+.forecast-icon {
+  font-size: 1.2rem;
+}
+
+.forecast-description {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.forecast-temperatures {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.forecast-temperature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.forecast-temperature strong {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.forecast-details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+.weather-source {
+  margin: 0.8rem 0 1rem;
+  color: var(--muted);
+}
+
+/* botao */
+/* Card de localização */
+.stButton > button {
+        width: 100%;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: transparent;
+        border: 1px solid var(--cyan);
+}
+    
